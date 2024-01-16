@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     protected Rigidbody2D rb;
     [SerializeField] protected PlayerController player;
     [SerializeField] protected float speed;
+    [SerializeField] protected int damage;
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -47,7 +48,23 @@ public class Enemy : MonoBehaviour
         if(!isRecoiling)
         {
             rb.AddForce(-1 * direction * hitForce *recoilFactor);
+            isRecoiling = true;
         }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        
+        if(collision.gameObject.CompareTag("Player") && !PlayerController.Instance.pState.invincible)
+        {
+            if(!isRecoiling)
+            {
+                Attack();
+            }
+        }
+    }
+    protected virtual void Attack()
+    {
+        PlayerController.Instance.TakeDamage(damage);
     }
 
 }

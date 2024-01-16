@@ -5,7 +5,7 @@ using UnityEngine;
 public class Zombie : Enemy
 {
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
         rb.gravityScale = 12;
     }
@@ -19,7 +19,7 @@ public class Zombie : Enemy
         base.Update();
         if(!isRecoiling)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, PlayerController.Instance.transform.position, speed * Time.deltaTime);
         }
     }
     public override void EnemyHit(float damage, Vector2 direction, float hitForce)
