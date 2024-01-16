@@ -298,7 +298,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Code Concept
+  m_Text: 'solid
+
+    the developer''s odessey'
 --- !u!222 &383143520
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5759,8 +5761,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0042505264, y: 0.0015001297, z: 0}
-    m_Extent: {x: 20.50365, y: 20.501598, z: 0}
+    m_Center: {x: 0.0036497116, y: -0.0041503906, z: 0}
+    m_Extent: {x: 20.498451, y: 20.50445, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
