@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public PlayerStateList pState;
     Animator anim;
     public static PlayerController Instance;
-
+    public int currLvl = 1;
     private int jumpCounter;
     [SerializeField] private int maxJumpCounter;
     private int jumpBufferCounter;
@@ -102,13 +102,14 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         gravity = rb.gravityScale;
         Mana = mana;
-        manaStorage.fillAmount = Mana;
+       if(manaStorage!=null) manaStorage.fillAmount = Mana;
     }
 
     // Update is called once per frame
     void Update()
     {
         getInputs();
+        if(pState.cutScene) return;
         UpdateJumpVariables();
         if (pState.dashing) return;
         StartAttack();
@@ -121,13 +122,13 @@ public class PlayerController : MonoBehaviour
         Heal();
     }
     void Flip()
-    {   
-        if(xAxis < 0)
+    {
+        if (xAxis < 0)
         {
             transform.localScale = new Vector3((float)0.5, transform.localScale.y, transform.localScale.z);
             pState.lookingRight = false;
         }
-        else
+        else if(xAxis >0)
         {
             transform.localScale = new Vector3((float)-0.5, transform.localScale.y, transform.localScale.z);
             pState.lookingRight = true;
@@ -238,7 +239,7 @@ public class PlayerController : MonoBehaviour
         canDash = false;
         pState.dashing = true;
         rb.gravityScale = 0;
-        rb.velocity =new Vector2((rb.velocity.x+1) * dashSpeed, 0);
+        rb.velocity =new Vector2((rb.velocity.x==0 ? 1: rb.velocity.x) * dashSpeed, 0);
         Instantiate(dashEffect, transform);
         yield return new WaitForSeconds(dashTime);
         rb.gravityScale = gravity;
@@ -371,5 +372,20 @@ public class PlayerController : MonoBehaviour
         pState.invincible = true;
         yield return new WaitForSeconds(1);
         pState.invincible = false;
+    }
+    public IEnumerator WalkIntoScene(Vector2 exitDir,float delay)
+    {
+        if(exitDir.y > 0)
+        {
+            rb.velocity = jumpForce * exitDir;
+        }
+        if(exitDir.x != 0)
+        {
+            xAxis = exitDir.x > 0 ? 1:-1;
+        }
+        Flip();
+        yield return new WaitForSeconds(delay);
+        pState.cutScene = false;
+
     }
 }

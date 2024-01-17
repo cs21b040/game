@@ -182,7 +182,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 9.5
+  m_GravityScale: 6
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -209,7 +209,7 @@ MonoBehaviour:
   walkSpeed: 5
   xAxis: 0
   yAxis: 0
-  jumpForce: 30
+  jumpForce: 20
   groundCheckPoint: {fileID: 2080355833296142568}
   groundCheckY: 0.2
   groundCheckX: 0.5
@@ -217,6 +217,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   pState: {fileID: 0}
+  currLvl: 1
   maxJumpCounter: 1
   jumpBufferFrames: 8
   canDash: 1
@@ -289,6 +290,7 @@ MonoBehaviour:
   lookingRight: 0
   invincible: 0
   healing: 0
+  cutScene: 0
 --- !u!1 &8239409491009719838
 GameObject:
   m_ObjectHideFlags: 0
