@@ -24,7 +24,7 @@ public class DialogueManager : MonoBehaviour
 
         Debug.Log("Starting dialogue with " + currentMessages.Length + " messages.");
         DisplayMessage();
-        backgroundBox.LeanScale(new Vector3(5.373f, 1.53f, 1.30f), 0.5f).setEaseInOutExpo();
+        backgroundBox.LeanScale(new Vector3(5.373f, 3.300f, 1.30f), 1.304f).setEaseInOutExpo();
 
     }
 
@@ -78,6 +78,6 @@ public class DialogueManager : MonoBehaviour
     public void NextScene()
     {
         Debug.Log("Next scene");
-        SceneManager.LoadScene("Lvl-1");
+        SceneManager.LoadScene("Intro");
     }
 }
