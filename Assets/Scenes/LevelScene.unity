@@ -2665,6 +2665,10 @@ PrefabInstance:
       value: Lvl-1 Scene
       objectReference: {fileID: 0}
     - target: {fileID: 1198913534609646167, guid: 9a4018c2c8c1f0741a6d44a5fa76f3c7, type: 3}
+      propertyPath: transitionTo
+      value: S-Lvl
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198913534609646167, guid: 9a4018c2c8c1f0741a6d44a5fa76f3c7, type: 3}
       propertyPath: exitDirection.x
       value: 1
       objectReference: {fileID: 0}
@@ -3972,11 +3976,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6527690774860040051, guid: 9a4018c2c8c1f0741a6d44a5fa76f3c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.43
+      value: 1.59
       objectReference: {fileID: 0}
     - target: {fileID: 6527690774860040051, guid: 9a4018c2c8c1f0741a6d44a5fa76f3c7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.05
+      value: -0.37
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
