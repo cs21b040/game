@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     public Text actorName;
     public Button continueButton;
     public RectTransform backgroundBox;
+    Scene currentScene;
 
     Message[] currentMessages;
     Actor[] currentActors;
@@ -36,6 +37,18 @@ public class DialogueManager : MonoBehaviour
         Actor actorToDisplay = currentActors[messageToDisplay.actorid];
         actorName.text = actorToDisplay.name;
 
+        //if messageText starts with "Meet Alex", then call Appear() from AlexIntro.cs
+        if (messageText.text.StartsWith("Meet Alex"))
+        {
+            GameObject alex = GameObject.Find("Alex");
+            alex.GetComponent<Rigidbody2D>().gravityScale = 3;
+        }
+
+        if (messageText.text.EndsWith("start playing.."))
+        {
+            GameObject alex = GameObject.Find("Alex");
+            Destroy(alex);
+        }
         AnimateTextColor();
     }
 
@@ -65,19 +78,32 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         backgroundBox.transform.localScale = Vector3.zero;
-        continueButton.onClick.AddListener(NextMessage);
+        currentScene = SceneManager.GetActiveScene();
+
     }
 
     // Update is called once per frame
     void Update()
     {
         //get element by name -> button -> onclick -> add dialogue manager -> next message
-            
     }
 
     public void NextScene()
     {
         Debug.Log("Next scene");
-        SceneManager.LoadScene("Intro");
+        print(currentScene.name);
+        /*
+        Scene NextScene;
+        if(currentScene.name == "Introduction")
+        {
+            NextScene = SceneManager.GetSceneByName("Mechanic Scene");
+        }
+        else
+        {
+            NextScene = SceneManager.GetSceneByName("S-Lvl");
+        }
+        string sceneName = NextScene.name;
+        SceneManager.LoadScene(sceneName);
+        */
     }
 }
