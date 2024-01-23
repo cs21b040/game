@@ -286,7 +286,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 96c365c944e077c41880eca1cd7f83d1, type: 3}
+    m_Font: {fileID: 12800000, guid: 690bda4a60721af40b0a7401d7a6bf60, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -5761,8 +5761,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0036497116, y: -0.0041503906, z: 0}
-    m_Extent: {x: 20.498451, y: 20.50445, z: 0}
+    m_Center: {x: -0.00045013428, y: 0.0025997162, z: 0}
+    m_Extent: {x: 20.50615, y: 20.5038, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
