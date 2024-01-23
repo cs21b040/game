@@ -68,6 +68,7 @@ Transform:
   m_Children:
   - {fileID: 2080355833296142568}
   - {fileID: 1844514441170848711}
+  - {fileID: 5003174772746362030}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &237018607304491578
@@ -131,7 +132,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2626627065121242002}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2c9fc69aee02ac94694a8b94c783e256, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -250,6 +251,13 @@ MonoBehaviour:
   maxHealth: 7
   sr: {fileID: 0}
   flashSpeed: 1
+  wallSlidingSpeed: 2
+  wallCheckPoint: {fileID: 5003174772746362030}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  wallJumpingTime: 0.1
+  wallJumpingPower: {x: 5, y: 10}
 --- !u!95 &1831520204362676904
 Animator:
   serializedVersion: 5
@@ -291,6 +299,37 @@ MonoBehaviour:
   invincible: 0
   healing: 0
   cutScene: 0
+--- !u!1 &4229647103941137123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5003174772746362030}
+  m_Layer: 0
+  m_Name: Wall Check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5003174772746362030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4229647103941137123}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.43, y: 1.19, z: -0.028364228}
+  m_LocalScale: {x: 2, y: 2, z: 2.1944263}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6428807152432568220}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8239409491009719838
 GameObject:
   m_ObjectHideFlags: 0

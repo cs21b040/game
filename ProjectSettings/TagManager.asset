@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Alex
+  - Enemy
+  - Boss
+  - FireBall
   layers:
   - Default
   - TransparentFX
