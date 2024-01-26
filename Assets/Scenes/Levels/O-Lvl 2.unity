@@ -520,15 +520,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 124360912}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ea4cf3387e8b7e42a845231a1423fe9, type: 3}
+  m_Script: {fileID: 11500000, guid: b76b5caec9d02af4c9dbf7917c596985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carRigidbody: {fileID: 124360913}
-  backTire: {fileID: 53750573}
-  frontTire: {fileID: 1035526322}
-  speed: 100
-  carTorque: 10
-  maxSlopeAngle: 8
+  carRigidbody1: {fileID: 124360913}
+  backTire1: {fileID: 53750573}
+  frontTire1: {fileID: 1035526322}
+  speed1: 20
+  carTorque1: 10
 --- !u!1 &259024226
 GameObject:
   m_ObjectHideFlags: 0
