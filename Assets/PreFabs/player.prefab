@@ -224,7 +224,7 @@ MonoBehaviour:
   canDash: 1
   dashTime: 0.2
   dashCoolDown: 0.35
-  dashSpeed: 9
+  dashSpeed: 20
   dashEffect: {fileID: 869824624844605670, guid: cae945703b8f837469ae7b44e52ce1b4, type: 3}
   AttackSpirit: {fileID: 2453414863894913610, guid: 994e7280b1e1f1045858a3813ba8d07c, type: 3}
   attack: 0
@@ -240,8 +240,8 @@ MonoBehaviour:
   recoilYSteps: 5
   stepsXrecoiled: 0
   stepsYrecoiled: 0
-  recoilXSpeed: 25
-  recoilYSpeed: 25
+  recoilXSpeed: 15
+  recoilYSpeed: 15
   timeToHeal: 1
   manaStorage: {fileID: 0}
   mana: 0
@@ -257,7 +257,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   wallJumpingTime: 0.1
-  wallJumpingPower: {x: 5, y: 10}
+  wallJumpingPower: {x: 20, y: 20}
 --- !u!95 &1831520204362676904
 Animator:
   serializedVersion: 5

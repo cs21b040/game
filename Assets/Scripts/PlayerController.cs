@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
@@ -116,6 +117,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        checkHealth();
         getInputs();
         if(pState.cutScene) return;
         UpdateJumpVariables();
@@ -133,6 +135,15 @@ public class PlayerController : MonoBehaviour
         StartAttack();
         Recoil();
         FlashWhileInvincible();
+    }
+    void checkHealth()
+    {
+        if(Health <= 0)
+        {
+            Destroy(gameObject);
+
+            SceneManager.LoadScene("LevelScene");
+        }
     }
     void Flip()
     {
@@ -335,11 +346,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    /*private void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(sideAttackTransform.position, sideAttackArea);
-    }*/
+    }
     private void Hit(Transform attackTransform,Vector2 attackArea,ref bool recoilDirection,float recoilStrength)
     {
         Collider2D[] objects = Physics2D.OverlapBoxAll(attackTransform.position, attackArea,0, attackableLayer);

@@ -67,7 +67,7 @@ public class BossManager : Enemy
         animator.SetBool("Dash", false);
         animator.SetBool("Attack", true);
         Vector3 temp = transform.position;
-        GameObject fireBallsInstance = Instantiate(fireBalls, new Vector3(temp.x + 2, temp.y, temp.z + 5), Quaternion.identity);
+        GameObject fireBallsInstance = Instantiate(fireBalls, new Vector3(temp.x -2, temp.y, temp.z + 5), Quaternion.identity);
         Vector3 fireBallsScale = fireBallsInstance.transform.localScale;
         if (PlayerController.Instance.transform.position.x < temp.x)
         {
