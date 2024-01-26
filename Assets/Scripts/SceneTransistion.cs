@@ -20,8 +20,10 @@ public class SceneTransistion : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        print("i");
         if (collision.CompareTag("Player"))
         {
+            
             GameManager.Instance.transitionedFrom = SceneManager.GetActiveScene().name;
             PlayerController.Instance.pState.cutScene = true;
             SceneManager.LoadScene(transitionTo);

@@ -176,7 +176,13 @@ MonoBehaviour:
   - actorid: 0
     message: Hello ! Myself Noah. I am here to help you throughout your joy of learning..
   - actorid: 0
-    message: Are you excited? Let's get started..
+    message: Are you excited? Let's get started.. Let's know the controls..
+  - actorid: 0
+    message: Click on right arrow ('>') to move right, left arrow ('<') to move left.
+  - actorid: 0
+    message: Click on 'Shift' to dash while moving..
+  - actorid: 0
+    message: Click on 'Z' to attack on enemies..
   - actorid: 0
     message: The game will have 4 levels. You have to solve the previous level to
       go to the next one..!
@@ -305,7 +311,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 96c365c944e077c41880eca1cd7f83d1, type: 3}
+    m_Font: {fileID: 12800000, guid: 690bda4a60721af40b0a7401d7a6bf60, type: 3}
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 1
@@ -335,15 +341,15 @@ RectTransform:
   m_GameObject: {fileID: 306874596}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5077996, y: 0.8753512, z: 2.0951056}
+  m_LocalScale: {x: 0.46209258, y: 0.8753512, z: 2.0951056}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1285372869}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.7, y: -15.7}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -0.6, y: -13.5}
+  m_SizeDelta: {x: 140.47217, y: 23.07763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &490031441
 GameObject:
@@ -872,7 +878,7 @@ RectTransform:
   m_GameObject: {fileID: 1285372868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.373621, y: 4.5880766, z: 1.3040869}
+  m_LocalScale: {x: 5.5348296, y: 4.5880766, z: 1.3040869}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1876926947}
@@ -1208,10 +1214,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 3f7d62edfef444047a32adf0120373de, type: 3}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 3
+      - m_Target: {fileID: 179417718}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: NextMessage
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1297,7 +1303,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 96c365c944e077c41880eca1cd7f83d1, type: 3}
+    m_Font: {fileID: 12800000, guid: 690bda4a60721af40b0a7401d7a6bf60, type: 3}
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 1

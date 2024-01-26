@@ -82,6 +82,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float flashSpeed;
     public delegate void OnHealthChangeDelegate();
     [HideInInspector] public OnHealthChangeDelegate OnHealthChangeCallback;
+    [Header("jump on wall")]
+    [SerializeField] private float wallSlidingSpeed=2f;    
+    [SerializeField] private Transform wallCheckPoint;
+    [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private float wallJumpingTime;
+    [SerializeField] private Vector2 wallJumpingPower;
+    float wallJumpingDirection;
+    bool isWallJumping, isWallSliding;
     private void Awake()
     {
         if(Instance !=null && Instance != this)
@@ -112,14 +120,19 @@ public class PlayerController : MonoBehaviour
         if(pState.cutScene) return;
         UpdateJumpVariables();
         if (pState.dashing) return;
-        StartAttack();
-        Flip();
-        Move();
-        jump();
+        if (!isWallJumping)
+        {
+            Flip();
+            Move();
+            jump();
+        }
+        Heal();
+        wallSlide();
+        wallJumping();
         startDash();
+        StartAttack();
         Recoil();
         FlashWhileInvincible();
-        Heal();
     }
     void Flip()
     {
@@ -159,6 +172,57 @@ public class PlayerController : MonoBehaviour
         }
         return false;
 
+    }
+    private bool onWall()
+    {
+
+        return Physics2D.OverlapCircle(wallCheckPoint.position, 0.3f, wallLayer);
+    }
+    /*void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(wallCheckPoint.position, 0.3f);
+    }*/
+    void wallSlide()
+    {
+        if(onWall() && !onGround() && xAxis !=0)
+        {
+            isWallSliding = true;
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y,-wallSlidingSpeed,float.MaxValue));
+        }
+        else
+        {
+            isWallSliding = false;
+            rb.gravityScale = gravity;
+        } 
+    }
+    void stopWallJumping()
+    {
+        isWallJumping = false;
+    }
+    void wallJumping()
+    {
+        if(isWallSliding)   
+        {
+            isWallJumping = false;  
+            wallJumpingDirection = !pState.lookingRight ? 1 : -1;
+            CancelInvoke(nameof(stopWallJumping));
+        }
+        if (Input.GetButtonDown("Jump") && isWallSliding)
+        {
+            isWallJumping = true;
+            rb.velocity = new Vector2(wallJumpingPower.x * wallJumpingDirection, wallJumpingPower.y);
+            Invoke("stopWallJumping", wallJumpingTime);
+            dashed = false;
+            jumpCounter = 0;
+            if ((pState.lookingRight && transform.eulerAngles.y == 0) || (!pState.lookingRight && transform.eulerAngles.y != 0))
+            {
+                pState.lookingRight = !pState.lookingRight;
+                int yDirection = !pState.lookingRight ? 0 : 180;
+                transform.eulerAngles = new Vector2(transform.eulerAngles.x, yDirection);
+            }
+            Invoke(nameof(stopWallJumping), wallJumpingTime);
+        }
     }
     void Heal()
     {
@@ -239,7 +303,7 @@ public class PlayerController : MonoBehaviour
         canDash = false;
         pState.dashing = true;
         rb.gravityScale = 0;
-        rb.velocity =new Vector2((rb.velocity.x==0 ? 1: rb.velocity.x) * dashSpeed, 0);
+        rb.velocity =new Vector2(dashSpeed * (!pState.lookingRight ? -1:1), 0);
         Instantiate(dashEffect, transform);
         yield return new WaitForSeconds(dashTime);
         rb.gravityScale = gravity;
