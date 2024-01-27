@@ -14,5 +14,10 @@ public class DialogueNPC : MonoBehaviour
         {
             trigger.TriggerDialogue();
         }
+
+        if(collision.gameObject.name == "Car")
+        {
+            trigger.TriggerDialogue();
+        }
     }
 }
