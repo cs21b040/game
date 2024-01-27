@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class car1 : MonoBehaviour
+public class car11 : MonoBehaviour
 {
-    public Rigidbody2D carRigidbody1;
-    public Rigidbody2D backTire1;
-    public Rigidbody2D frontTire1;
-    public float speed1 = 20;
-    public float carTorque1 = 10;
-    private float movement1;
+    public Rigidbody2D carRigidbody;
+    public Rigidbody2D backTire;
+    public Rigidbody2D frontTire;
+    public float speed = 20;
+    public float carTorque = 10;
+    public float maxSlopeAngle = 10;
+    private float movement;
     //public int booster = 1;
     // Start is called before the first frame update
     void Start()
@@ -20,17 +21,16 @@ public class car1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement1 = Input.GetAxis("Horizontal");
+        movement = Input.GetAxis("Horizontal");
     }
 
 
     public void FixedUpdate()
     {
-        backTire1.AddTorque(-movement1 * speed1 * Time.fixedDeltaTime);
-        frontTire1.AddTorque(-movement1 * speed1 * Time.fixedDeltaTime);
-        carRigidbody1.AddTorque(-movement1 * carTorque1 * Time.fixedDeltaTime);
 
-
+        backTire.AddTorque(-movement * speed * Time.fixedDeltaTime);
+        frontTire.AddTorque(-movement * speed * Time.fixedDeltaTime);
+        carRigidbody.AddTorque(-movement * carTorque * Time.fixedDeltaTime);
 
     }
 }
