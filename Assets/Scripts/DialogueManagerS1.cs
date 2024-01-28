@@ -75,6 +75,10 @@ public class DialogueManagerS1 : MonoBehaviour
             }
             if(currentScene.name == "O-Lvl 3")
             {
+                SceneManager.LoadScene("S-Lvl2");
+            }
+            if(currentScene.name == "S-Lvl2")
+            {
                 SceneManager.LoadScene("LevelScene");
             }
             if(currentScene.name == "L-Lvl 1")
