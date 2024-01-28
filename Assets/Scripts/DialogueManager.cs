@@ -58,7 +58,6 @@ public class DialogueManager : MonoBehaviour
         if (activeMessage >= currentMessages.Length)
         {
             Debug.Log("No more messages.");
-        
             NextScene();
             return;
         }
