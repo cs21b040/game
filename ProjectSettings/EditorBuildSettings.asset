@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/I-Lvl 1.unity
     guid: 97544662079d60942b61934151d61755
   - enabled: 1
-    path: Assets/Scenes/Levels/I-Lvl 2.unity
+    path: Assets/Scenes/Levels/I-Lvl.unity
     guid: 09d87c4a859868f4d961a2916501e04d
   - enabled: 1
     path: Assets/Scenes/Levels/L Lvl Mech.unity

@@ -48,6 +48,10 @@ public class DialogueManagerS1 : MonoBehaviour
         {
             complete = true;
         }
+        if(messageText.text.EndsWith("Open the parachute only when in air.."))
+        {
+            complete = true;
+        }
 
         Actor actorToDisplay = currentActors[messageToDisplay.actorid];
         actorName.text = actorToDisplay.name;
@@ -93,6 +97,7 @@ public class DialogueManagerS1 : MonoBehaviour
             {
                 SceneManager.LoadScene("LevelScene");
             }
+
             return;
         }
         DisplayMessage();

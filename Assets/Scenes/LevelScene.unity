@@ -369,7 +369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1198913534609646167, guid: 9a4018c2c8c1f0741a6d44a5fa76f3c7, type: 3}
       propertyPath: transitionTo
-      value: I-Lvl 1
+      value: I-Lvl
       objectReference: {fileID: 0}
     - target: {fileID: 1198913534609646167, guid: 9a4018c2c8c1f0741a6d44a5fa76f3c7, type: 3}
       propertyPath: exitDirection.x
