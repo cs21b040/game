@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: bc84f25a91d95d74c8a160c3c4823370, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -529,6 +529,7 @@ MonoBehaviour:
   speed: 100
   carTorque: 10
   maxSlopeAngle: 10
+  brakeForce: 5
 --- !u!1 &140797644
 GameObject:
   m_ObjectHideFlags: 0
