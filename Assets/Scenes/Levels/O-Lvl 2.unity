@@ -565,6 +565,7 @@ MonoBehaviour:
   actorName: {fileID: 1821623767}
   continueButton: {fileID: 1689967538}
   backgroundBox: {fileID: 1106976933}
+  complete: 0
 --- !u!114 &140797646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2301,6 +2302,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1453297548}
+  SmokeSpirit: {fileID: 5216571719754797556, guid: e0ec9acc4304aaa4599e817d528388f0, type: 3}
+  position: {x: 0, y: 0, z: 0}
+  t: {fileID: 0}
 --- !u!1 &1466910047
 GameObject:
   m_ObjectHideFlags: 0
