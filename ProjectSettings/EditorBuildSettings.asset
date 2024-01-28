@@ -21,6 +21,39 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelScene.unity
     guid: 635a1cf2ba8a82a4f81d05f41aea42c2
   - enabled: 1
+    path: Assets/Scenes/Levels/Final_stage.unity
+    guid: 1cdc6697dacb6cd44a54ff31929d002d
+  - enabled: 1
+    path: Assets/Scenes/Levels/I-Lvl 1.unity
+    guid: 97544662079d60942b61934151d61755
+  - enabled: 1
+    path: Assets/Scenes/Levels/I-Lvl 2.unity
+    guid: 09d87c4a859868f4d961a2916501e04d
+  - enabled: 1
+    path: Assets/Scenes/Levels/L Lvl Mech.unity
+    guid: fca41a891de411c429567c879a6427e2
+  - enabled: 1
+    path: Assets/Scenes/Levels/L-Lvl 1.unity
+    guid: c05b834ebbafc1040b4596d77242102c
+  - enabled: 1
+    path: Assets/Scenes/Levels/L-Lvl 2.unity
+    guid: bcb2e69a9a2a15941a76a638eb90aa76
+  - enabled: 1
+    path: Assets/Scenes/Levels/O lvl 1.5.unity
+    guid: 1d91d5b0a48e1db45acf31a0f954c753
+  - enabled: 1
+    path: Assets/Scenes/Levels/O Lvl 2.5.unity
+    guid: 63f0cc0a185532b49934b6680eeb2f16
+  - enabled: 1
+    path: Assets/Scenes/Levels/O-Lvl 1.unity
+    guid: 9cf76461bdf1f324ea8e8ebf34e3a53e
+  - enabled: 1
+    path: Assets/Scenes/Levels/O-Lvl 2.unity
+    guid: 4290526c53a4bb546b363ede0b11f109
+  - enabled: 1
+    path: Assets/Scenes/Levels/O-Lvl 3.unity
+    guid: 7f703b0d304179a42843f658f8801376
+  - enabled: 1
     path: Assets/Scenes/Levels/D-Lvl.unity
     guid: 078500872379a47429fe05a33fe5f20b
   - enabled: 1

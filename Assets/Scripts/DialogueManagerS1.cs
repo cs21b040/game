@@ -15,7 +15,7 @@ public class DialogueManagerS1 : MonoBehaviour
     Message[] currentMessages;
     Actor[] currentActors;
     int activeMessage = 0;
-
+    public bool complete = false;
     public void StartDialogue(Message[] messages, Actor[] actors)
     {
         currentMessages = messages;
@@ -45,6 +45,7 @@ public class DialogueManagerS1 : MonoBehaviour
         {
             Debug.Log("No more messages.");
             backgroundBox.LeanScale(Vector3.zero, 1.304f).setEaseInOutExpo();
+            complete = true;
             return;
         }
         DisplayMessage();

@@ -8,6 +8,7 @@ public class OnHit : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private Text messageText;
+    [SerializeField] private string sceneName="D-Lvl";
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -19,7 +20,7 @@ public class OnHit : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("D-lvl");
+                SceneManager.LoadScene(sceneName);
             }
         }
     }
