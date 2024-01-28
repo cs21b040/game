@@ -91,18 +91,18 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("Next scene");
         print(currentScene.name);
-        /*
-        Scene NextScene;
-        if(currentScene.name == "Introduction")
+
+        string NextScene;
+        if (currentScene.name == "Introduction")
         {
-            NextScene = SceneManager.GetSceneByName("Mechanic Scene");
+            NextScene = "Mechanic Scene";
         }
         else
         {
-            NextScene = SceneManager.GetSceneByName("S-Lvl");
+            NextScene = "LevelScene";
         }
-        string sceneName = NextScene.name;
-        SceneManager.LoadScene(sceneName);
-        */
+        
+        SceneManager.LoadScene(NextScene);
+
     }
 }

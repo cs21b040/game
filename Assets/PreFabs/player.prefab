@@ -257,7 +257,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   wallJumpingTime: 0.1
-  wallJumpingPower: {x: 35, y: 20}
+  wallJumpingPower: {x: 20, y: 20}
 --- !u!95 &1831520204362676904
 Animator:
   serializedVersion: 5
