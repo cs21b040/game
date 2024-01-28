@@ -18,6 +18,14 @@ public class car1 : MonoBehaviour
         if(collision.gameObject.name == "Obstacle")
         {
             Debug.Log("Collided");
+            //velocity  is 0 for car and tires
+            carRigidbody.velocity = Vector2.zero;
+            backTire.velocity = Vector2.zero;
+            frontTire.velocity = Vector2.zero;
+            //angular velocity is 0 for car and tires
+            carRigidbody.angularVelocity = 0;
+            backTire.angularVelocity = 0;
+            frontTire.angularVelocity = 0;
             isColliding = true;
         }
     }
@@ -32,12 +40,13 @@ public class car1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement = Input.GetAxis("Horizontal");
+        
         if(isColliding == true)
         {
-            backTire.AddTorque(-movement * speed * Time.fixedDeltaTime*100);
-            frontTire.AddTorque(movement * speed * Time.fixedDeltaTime*100);
+            
+            return;
         }
+        movement = Input.GetAxis("Horizontal");
     }
 
 
