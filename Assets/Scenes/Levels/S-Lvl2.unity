@@ -3762,8 +3762,6 @@ GameObject:
   - component: {fileID: 166611540}
   - component: {fileID: 166611539}
   - component: {fileID: 166611538}
-  - component: {fileID: 166611537}
-  - component: {fileID: 166611536}
   - component: {fileID: 166611535}
   m_Layer: 5
   m_Name: Canvas
@@ -3784,42 +3782,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b490d91aac0f9844b9cd316e56321f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &166611536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 166611534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c03c4be8be24b341b5f0a419855a24c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  messages: []
-  actors: []
---- !u!114 &166611537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 166611534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20f5b8e1bde5e3640a46024ca62ffe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  messages:
-  - actorid: 0
-    message: In the depths of shadow, the demons have captured the Queen..
-  - actorid: 0
-    message: Our mission is to save her..
-  - actorid: 0
-    message: But beware of the enemies.. They may kill you!!
-  actors:
-  - name: Noah
-    actorid: 0
 --- !u!114 &166611538
 MonoBehaviour:
   m_ObjectHideFlags: 0
