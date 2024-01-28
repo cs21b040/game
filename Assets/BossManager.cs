@@ -11,7 +11,8 @@ public class BossManager : Enemy
     [SerializeField] private float dashSpeed;
     [SerializeField] private GameObject fireBalls;
     [SerializeField] private GameObject teleportEffectPrefab;
-    private bool transition = false; 
+    private bool transition = false;
+    [SerializeField] private GameObject dealer;
     protected override void Start()
     {
         speed = 1f;
@@ -41,6 +42,7 @@ public class BossManager : Enemy
         }
         if (health <= 0f)
         {
+            dealer.SetActive(true);
             Destroy(gameObject);
         }
     }
