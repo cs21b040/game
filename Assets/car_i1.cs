@@ -9,6 +9,8 @@ public class car_i1 : MonoBehaviour
     public Rigidbody2D frontTire;
     public float speed = 20;
     public float carTorque = 10;
+    public float brakeForce = 5;
+    private bool isBraking = false;
     private float movement;
 
     public GameObject para;
@@ -58,6 +60,7 @@ public class car_i1 : MonoBehaviour
     void Update()
     {
         movement = Input.GetAxis("Horizontal");
+        isBraking = Input.GetKey(KeyCode.Space);
         if (Input.GetKeyDown(KeyCode.P) && !parachuteDeployed)
         {
             paraStart();
@@ -99,7 +102,10 @@ public class car_i1 : MonoBehaviour
         frontTire.AddTorque(tireRotationTorque);
 
         carRigidbody.AddTorque(-movement * carTorque * Time.fixedDeltaTime);
-
+        if (isBraking)
+        {
+            ApplyBrakes();
+        }
         if (parachuteDeployed)
         {
             float reductionFactor = 0.1f;
@@ -130,6 +136,16 @@ public class car_i1 : MonoBehaviour
         {
             carRigidbody.AddTorque(-movement * carTorque * Time.fixedDeltaTime);
         }
+    }
+    private void ApplyBrakes()
+    {
+        // Apply braking force to gradually stop the car
+        carRigidbody.velocity = Vector2.Lerp(carRigidbody.velocity, Vector2.zero, brakeForce * Time.deltaTime);
+        carRigidbody.angularVelocity = Mathf.Lerp(carRigidbody.angularVelocity, 0f, brakeForce * Time.deltaTime);
+
+        // Stop the back and front tires
+        backTire.angularVelocity = 0f;
+        frontTire.angularVelocity = 0f;
     }
 
 }
