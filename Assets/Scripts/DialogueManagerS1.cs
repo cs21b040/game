@@ -16,13 +16,13 @@ public class DialogueManagerS1 : MonoBehaviour
     Message[] currentMessages;
     Actor[] currentActors;
     int activeMessage = 0;
-    public bool complete = false;
+    public bool complete;
     public void StartDialogue(Message[] messages, Actor[] actors)
     {
         currentMessages = messages;
         currentActors = actors;
         activeMessage = 0;
-
+        complete = false;
         Debug.Log("Starting dialogue with " + currentMessages.Length + " messages.");
         DisplayMessage();
         backgroundBox.LeanScale(new Vector3(5.373f, 3.300f, 1.30f), 1.304f).setEaseInOutExpo();
@@ -36,6 +36,15 @@ public class DialogueManagerS1 : MonoBehaviour
 
        
         if(messageText.text.EndsWith("let's move forward..."))
+        {
+            complete = true;
+        }
+        Debug.Log(messageText.text);
+        if(messageText.text.EndsWith("Alex may help..!"))
+        {
+            complete = true;
+        }
+        if(messageText.text.EndsWith("start playing.."))
         {
             complete = true;
         }
