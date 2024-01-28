@@ -52,6 +52,10 @@ public class DialogueManagerS1 : MonoBehaviour
         {
             complete = true;
         }
+        if (messageText.text.EndsWith(" to implement interfaces it does not use. Instead of one large  interface, it's better to have smaller, specific interfaces."))
+        {
+            complete = true;
+        }
 
         Actor actorToDisplay = currentActors[messageToDisplay.actorid];
         actorName.text = actorToDisplay.name;
