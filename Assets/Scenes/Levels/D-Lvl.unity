@@ -8213,9 +8213,9 @@ MonoBehaviour:
   - actorid: 0
     message: But the way is full of electric field, were only electric engines work..
   - actorid: 0
-    message: Don't worry! We have got a hybrid car.. But a component is missing...
+    message: Don't worry! We have got a hybrid car.. But the engine is missing...
   - actorid: 0
-    message: We have to defeat the Boss to get the component.. Let's do it..
+    message: We have to defeat the Boss to get the hybrid engine.. Let's do it..
   actors:
   - name: Noah
     actorid: 0
@@ -28896,8 +28896,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.14464998, y: -3.0441, z: 0}
-    m_Extent: {x: 4.04705, y: 7.0752, z: 0}
+    m_Center: {x: 0.13849998, y: -3.0475001, z: 0}
+    m_Extent: {x: 4.0462, y: 7.0741, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
