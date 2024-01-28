@@ -61,6 +61,34 @@ public class DialogueManagerS1 : MonoBehaviour
         {
             Debug.Log("No more messages.");
             backgroundBox.LeanScale(Vector3.zero, 1.304f).setEaseInOutExpo();
+            if(currentScene.name == "O lvl 1.5")
+            {
+                SceneManager.LoadScene("O-Lvl 2");
+            }
+            if(currentScene.name == "O-Lvl 2")
+            {
+                SceneManager.LoadScene("O Lvl 2.5");
+            }
+            if(currentScene.name == "O Lvl 2.5")
+            {
+                SceneManager.LoadScene("O-Lvl 3");
+            }
+            if(currentScene.name == "O-Lvl 3")
+            {
+                SceneManager.LoadScene("LevelScene");
+            }
+            if(currentScene.name == "L-Lvl 1")
+            {
+                SceneManager.LoadScene("L Lvl Mech");
+            }
+            if(currentScene.name == "L Lvl Mech")
+            {
+                SceneManager.LoadScene("L-Lvl 2");
+            }
+            if(currentScene.name == "L-Lvl 2")
+            {
+                SceneManager.LoadScene("LevelScene");
+            }
             return;
         }
         DisplayMessage();
