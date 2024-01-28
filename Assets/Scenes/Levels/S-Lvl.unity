@@ -10626,7 +10626,7 @@ MonoBehaviour:
     message: "\u201CA class should have only one reason to change, meaning that it
       should have only one  responsibility or job."
   - actorid: 0
-    message: Hope you has some valuable learnings, now let's move forward...
+    message: Hope you have  some valuable learnings, now let's move forward...
   actors:
   - name: Noah
     actorid: 0
@@ -13853,11 +13853,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6428807152432568220, guid: 9223506eebebac545872f3627a48a9f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55.2
+      value: -7.1
       objectReference: {fileID: 0}
     - target: {fileID: 6428807152432568220, guid: 9223506eebebac545872f3627a48a9f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.1
+      value: 9.8
       objectReference: {fileID: 0}
     - target: {fileID: 6428807152432568220, guid: 9223506eebebac545872f3627a48a9f9, type: 3}
       propertyPath: m_LocalPosition.z

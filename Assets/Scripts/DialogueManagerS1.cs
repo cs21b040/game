@@ -11,6 +11,7 @@ public class DialogueManagerS1 : MonoBehaviour
     public Text actorName;
     public Button continueButton;
     public RectTransform backgroundBox;
+    Scene currentScene;
 
     Message[] currentMessages;
     Actor[] currentActors;
@@ -33,6 +34,12 @@ public class DialogueManagerS1 : MonoBehaviour
         Message messageToDisplay = currentMessages[activeMessage];
         messageText.text = messageToDisplay.message;
 
+       
+        if(messageText.text.EndsWith("let's move forward..."))
+        {
+            complete = true;
+        }
+
         Actor actorToDisplay = currentActors[messageToDisplay.actorid];
         actorName.text = actorToDisplay.name;
         AnimateTextColor();
@@ -45,7 +52,6 @@ public class DialogueManagerS1 : MonoBehaviour
         {
             Debug.Log("No more messages.");
             backgroundBox.LeanScale(Vector3.zero, 1.304f).setEaseInOutExpo();
-            complete = true;
             return;
         }
         DisplayMessage();
@@ -64,6 +70,7 @@ public class DialogueManagerS1 : MonoBehaviour
     void Start()
     {
         backgroundBox.transform.localScale = Vector3.zero;
+        currentScene = SceneManager.GetActiveScene();
 
     }
 
