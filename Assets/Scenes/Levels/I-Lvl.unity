@@ -2443,6 +2443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1791769927}
+  ds1: {fileID: 0}
 --- !u!61 &1791769924
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2574,9 +2575,8 @@ MonoBehaviour:
     message: " That\u2019s the Interface Segregation Principle. Breaking down a complex
       interface into  smaller, specific parts and avoiding fat interfaces."
   - actorid: 0
-    message: "\u201CA client should not be forced to implement interfaces it does
-      not use. Instead of one large  interface, it's better to have smaller, specific
-      interfaces.\u201D"
+    message: A client should not be forced to implement interfaces it does not use.
+      Instead of one large  interface, it's better to have smaller, specific interfaces.
   actors:
   - name: Noah
     actorid: 0
