@@ -13,6 +13,8 @@ public class car : MonoBehaviour
     public float brakeForce = 5;
     private bool isBraking = false;
     private float movement;
+    public float maxVal = 1;
+    public float curVal = 1;
     //public int booster = 1;
     // Start is called before the first frame update
     void Start()
@@ -31,7 +33,6 @@ public class car : MonoBehaviour
     public void FixedUpdate()
     {
         float slopeAngle = Vector2.Angle(Vector2.up, carRigidbody.transform.up);
-        Debug.Log("Slope Angle: " + slopeAngle);
         // Check if the slope angle exceeds the maximum allowed angle
         if (slopeAngle <= maxSlopeAngle)
         {
